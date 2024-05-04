@@ -16,7 +16,7 @@ require('dotenv').config();
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the origin of your React app
+  origin: 'http://159.203.124.196:3000', // Replace with the origin of your React app
   credentials: true,
 };
 
@@ -26,7 +26,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 //mongoose.set('debug', true); 
-mongoose.connect('mongodb://localhost:27017/expenses', {
+mongoose.connect('mongodb+srv://doadmin:759x421WTP3n8UID@db-mongodb-nyc3-74012-ea192bfb.mongo.ondigitalocean.com/expenses?replicaSet=db-mongodb-nyc3-74012&tls=true&authSource=admin', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -176,6 +176,6 @@ app.get('/montlyExpenses', async (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(port, '165.22.32.153', () => {
   console.log(`Server is running on port ${port}`);
 });
