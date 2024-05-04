@@ -78,6 +78,7 @@ const ExpenseForm = ({userData}) => {
 
       if (response.ok) {
         const newExpense = await response.json();
+        alert('The monthly budget has been recorded , you can visualize the differences between anticipated and actual expenses in View Monthly Expenditure tab');
         console.log(newExpense); // Update the user state or perform any necessary actions
       } else {
         // Handle server-side error
