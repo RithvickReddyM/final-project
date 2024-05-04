@@ -37,7 +37,7 @@ const SignIn = ({ onSignIn }) => {
   };
 
   return (
-    <div className={`SignInContainer BackgroundImage`}> {/* Add the CSS class to the container */}
+    <div className="SignInContainer"> {/* Add the CSS class to the container */}
       <h2>Sign In</h2>
       <form className="SignInForm" onSubmit={handleSubmit}>
         <label>Email:</label>
