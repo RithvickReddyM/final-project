@@ -19,12 +19,21 @@ const App = () => {
     // Check if the user is authenticated (e.g., by checking a token in local storage)
     const storedUser = localStorage.getItem('user');
     const storedToken = localStorage.getItem('token');
+    
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+      try {
+        const userObject = JSON.parse(storedUser);
+        setUser(userObject);
+      } catch (error) {
+        console.error('Failed to parse user from localStorage:', error);
+      }
+    }
+  
+    if (storedToken) {
       setToken(storedToken);
     }
   }, []);
-
+  
   useEffect(() => {
     if (user) {
       const intervalId = setInterval(() => {
