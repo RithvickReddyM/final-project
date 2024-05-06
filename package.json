@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@applitools/eyes-webdriverio": "^5.54.2",
     "@testing-library/jest-dom": "^5.17.0",
     "axios": "^1.6.2",
     "body-parser": "^1.20.2",
@@ -21,13 +22,15 @@
     "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "tls": "^0.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.22"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cy:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -52,10 +55,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.44.1",
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
     "@testing-library/react": "^15.0.6",
     "@testing-library/user-event": "^14.5.2",
+    "cypress": "^13.8.1",
     "jest": "^27.5.1",
     "puppeteer": "^22.7.1",
     "supertest": "^7.0.0"
