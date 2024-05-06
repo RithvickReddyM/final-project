@@ -39,7 +39,8 @@ app.post('/signup', async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.create({ email, password });
-    res.json(user);
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '15m' });
+    res.json({ user, token });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

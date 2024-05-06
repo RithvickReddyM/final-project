@@ -19,6 +19,7 @@ const SignUp = ({ onSignUp }) => {
 
       if (response.ok) {
         const { user, token }  = await response.json();
+        console.log(user, token);
         onSignUp(user, token); // Update the user state or perform any necessary actions
       } else {
         // Handle authentication error
